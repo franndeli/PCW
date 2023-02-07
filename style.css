@@ -1,10 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
+:root{
+    --gris-claro: #D6D3D3;
+    --gris: #B0ADAA;
+    --amarillo-oscuro: #E3C04D;
+    --amarillo: #E9CD6A;
+    --amarillo-claro: #EEE5A2;
+    --amarillo-claro2: #EDE9C1;
+    --negro: black;
+    --blanco: white;
+}
+
 h1{
     font-family: 'Abril Fatface', cursive;
 }
 
 *{
     font-family: 'Roboto', sans-serif;
+}
+/*PARA FORMULARIOS*/
+form#formulario {
+    width: 30em;
+    margin:auto;
+}
+form#formulario {
+    background-color: var(--amarillo-claro2);
+    list-style: none;
+}
+form#formulario > fieldset > ul {
+    list-style: none;
+    margin-top: 2em;
+}
+form#formulario > fieldset > ul > li > label > input:hover{
+    color: var(--amarillo);
+}
+form#formulario > fieldset > legend {
+    font-weight: bold;
+}
+/*para que destaquen los campos focus*/
+input:focus{
+    border: 2px solid;
+    background: var(--gris-claro);
 }
