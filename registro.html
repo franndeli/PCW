@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <!-- ponemos antes el de fontello para que no machaque a nuestro css principal -->
-        <!--<link rel="stylesheet" href="fontello/css/fontello.css"/> -->
+        <link rel="stylesheet" href="fontello/css/fontello.css"/>
         <link href="style.css" rel="stylesheet"/> 
         <!--<link rel="icon" href="log-img.png"> -->
         <meta charset="UTF-8">
@@ -25,14 +25,13 @@
                 </label> -->
                 <nav>
                     <ul>
-                        <li><a href="index.html"><span class=""></span>inicio</a></li>
-                        <li><a href="buscar.html"><span class=""></span>buscar</a></li>
-                        <li><a href="nueva.html"><span class=""></span>nueva</a></li>
-                        <li><a href="login.html"><span class=""></span>login</a></li>
-                        <li><a href="registro.html"><span class=""></span>registro</a></li>
-                        <li class="logout"><a href="index.html"><span class=""></span>logout</a></li>
-                      
-                    </ul>   
+                        <li><a href="index.html"><span class="icon-home"></span>inicio</a></li>
+                        <li><a href="buscar.html"><span class="icon-search"></span>buscar</a></li>
+                        <li><a href="nueva.html"><span class="icon-plus"></span>nueva</a></li>
+                        <li><a href="login.html"><span class="icon-user"></span>login</a></li>
+                        <li><a href="registro.html"><span class="icon-user-add"></span>registro</a></li>
+                        <li class="logout"><a href="index.html"><span class="icon-user-delete"></span>logout</a></li>
+                    </ul>    
                 </nav>            
             </div>
         </header>
@@ -41,11 +40,11 @@
             <fieldset>
                 <legend>Registrate</legend>
                     <ul>
-                        <li><span class=""></span><label><p>Nombre</p><input type="text" id="nombre" name="nombre" autofocus="autofocus" required></label><br></li>
-                        <li><span class=""></span><label><p>Login</p><input type="text" id="login" name="login" minlength="4" maxlength="20" pattern="[A-Za-z0-9]+" required></label><br></li>
-                        <li><span class=""></span><label><p>Contraseña</p><input type="password" id="password" name="password" minlength="4" maxlength="20" pattern="[A-Za-z0-9-\.-\_]+" required></label><br></li>
-                        <li><span class=""></span><label><p>Repetir contraseña</p><input type="password" id="password2" name="password2" minlength="4" maxlength="20" ></label><br></li>
-                        <li><p>Foto</p><label for="foto" class="subir">
+                        <li><p><span class="icon-right-open"></span><label>Nombre</p><input type="text" id="nombre" name="nombre" autofocus="autofocus" required></label><br></li>
+                        <li><p><span class="icon-user"></span><label>Login</p><input type="text" id="login" name="login" minlength="4" maxlength="20" pattern="[A-Za-z0-9]+" required></label><br></li>
+                        <li><p><span class="icon-key"></span><label>Contraseña</p><input type="password" id="password" name="password" minlength="4" maxlength="20" pattern="[A-Za-z0-9-\.-\_]+" required></label><br></li>
+                        <li><p><span class="icon-key"></span><label>Repetir contraseña</p><input type="password" id="password2" name="password2" minlength="4" maxlength="20" ></label><br></li>
+                        <li><p><span class="icon-picture"></span>Foto</p><label for="foto" class="subir">
                             <i class="idk"></i>Subir archivo
                         </label>
                             <input type="file" id="foto" value="" accept="image/*" style='display: none;'><br>
