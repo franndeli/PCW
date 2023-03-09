@@ -25,9 +25,7 @@
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
-        margin-bottom: 0;
     }
-
 /*cabecera imagen, titulo y sub*/
 /*header {
     margin-top: 2em;
@@ -101,7 +99,7 @@ header > a > img {
 /*PARA FORMULARIOS*/
     form#formulario {
         width: 30em;
-        margin: auto;
+        margin: 0 auto;
     }
     form#formulario {
         background-color: var(--blanco);
@@ -131,6 +129,7 @@ header > a > img {
     form#formulario > fieldset > ul > li > p {
         margin-left: 0;
     }
+    
 /*para que destaquen los campos focus*/
     input:focus{
         border: 2px solid;
@@ -219,10 +218,17 @@ header > a > img {
         background-color: var(--negro);
     }
 /*INDEX*/
+    body > h2{
+        text-align: center;
+        margin-top: 3em;
+    }
     body > section.fotosindex > article{
         width: 33%;
         vertical-align: top;
         display: inline-block;
+        border: .1em solid var(--amarillo-oscuro);
+        background-color: var(--blanco);
+        margin-top: 2em;
     }
     body > section.fotosindex {
         margin-top: 2em; 
@@ -232,20 +238,28 @@ header > a > img {
         height: 10em;
         display: flex;
     }
-    body > section.fotosindex > article > a > img{
-        display: flex;
-        margin-left: 8em;
-    }
     body > section.fotosindex > article:hover {
         transition: transform .2s;
         -webkit-transform:scale(1.1);transform:scale(1.1);
     }
     body > section.fotosindex > article {
-        overflow:hidden;
+        overflow: hidden;
     }
     body > section.fotosindex > article > p{
         text-align: center;
         margin-top: 0;
+    }
+    body > section.fotosindex > article > div.imagen{
+        text-align: center;
+    }
+    body > section.fotosindex > article > div.imagen > a > img{
+        margin-top: 1.5em;
+        width: 20em;
+        height: 15em;
+    }
+    body > section.fotosindex > article > span.tooltip > h3{
+        padding: 1.6em;
+        margin-bottom: 0;
     }
 /*ACERCA DE*/
     fieldset.acercade {
@@ -301,8 +315,37 @@ header > a > img {
         align-items: center;
         display: none;
     }
-    #formulario{
-        width: 80%;
+    body > section.fotosindex > article > div.imagen > a > img{
+        margin-top: 1.5em;
+        width: 8em;
+        height: 6em;
+    }
+    form#formulario {
+        margin-top: 20px;
+        width: 20em;
+        margin: 0 auto;
+    }
+    form#formulario > fieldset{
+        margin-top: 2em;   
+    }
+}
+@media only screen and (max-width: 1410px) {
+    body > section.fotosindex > article > div.imagen > a > img{
+        margin-top: 1.5em;
+        width: 15em;
+        height: 11em;
+    }
+    body > section.fotosindex > article{
+        width:100%;
+        vertical-align: top;
+        display: inline-block;
+        border: .1em solid var(--amarillo-oscuro);
+        background-color: var(--blanco);
+        margin-top: 2em;
+    }
+    fieldset.acercade {
+        text-align: center;
+        margin-top: 2em ;
     }
 }
 /*para que se vean solo iconitos*/
@@ -327,30 +370,12 @@ header > a > img {
     }
 }
 /* Tooltip*/
-span.tooltip {
-    padding: 10em;
-    position: relative;
-    cursor: pointer;
+.tooltip {
+    position: relative; 
+    cursor: help;
 }
-.tooltip-info {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-}
-span.tooltip::before {
-    content: attr(data-tooltip);
-    position: absolute;
-    top: 1.5em;
-    font-size: 0.9em;
-    padding: .7em;
-    display: none;
-    color: var(--blanco);
-    background: var(--amarillo);
-    transition: opacity 0.1s ease-out;
-    text-align: left;
-}
-span:hover::before {
-    display: inline-block;
+.tooltip:hover::before {
+    opacity: 1;
 }
 
 /* Boton busqueda*/
