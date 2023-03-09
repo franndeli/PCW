@@ -27,6 +27,7 @@
         text-overflow: ellipsis;
         margin-bottom: 0;
     }
+
 /*cabecera imagen, titulo y sub*/
 /*header {
     margin-top: 2em;
@@ -350,4 +351,70 @@ span.tooltip::before {
 }
 span:hover::before {
     display: inline-block;
+}
+
+/* Boton busqueda*/
+input.botonbuscar{
+    text-decoration:none;
+    font-size: 1em;
+    color: var(--negro);
+    padding-top:.5em;
+    padding-bottom:.5em;
+    padding-left:2em;
+    padding-right:2em;
+    background-color: var(--amarillo-claro2);
+    border-color: var(--amarillo);
+    border-style: solid;
+    float: left;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+input.botonbuscar:hover {
+    background-color: var(--negro);
+    color: var(--blanco);
+}
+
+input#nombrebuscar{
+    font-size: .9em;
+    height: 2em;
+    width: 15em;
+}
+
+img.prueba{
+    width: 30em;
+    display: block;
+    margin: 0 auto;
+    height: fit-content;
+}
+
+div.textopubli{
+    text-align: justify;
+}
+
+fieldset.publi{
+    margin: 0 auto;
+    width: 100em;
+    padding-right: 2em;
+    padding-left: 2em;
+}
+
+fieldset.comentsolo{
+    margin-bottom: 3em;
+    padding-right: 2em;
+    padding-left: 2em;
+}
+
+textarea#Comment{
+    font-size: medium;
+    width: 500px;
+    height: 150px;
+    text-align: center;
+}
+
+div.pruebaa{
+    margin: 0 auto;
+    width: 100em;
+    padding-right: 0em;
+    padding-left: 0em;
 }
