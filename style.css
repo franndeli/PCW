@@ -26,6 +26,7 @@
         white-space: nowrap;
         text-overflow: ellipsis;
     }
+
 /*cabecera imagen, titulo y sub*/
 /*header {
     margin-top: 2em;
@@ -47,6 +48,7 @@ header > a > img {
     float: right;
     border-left: 1px solid var(--blanco);
 }*/
+
     .navegacion > nav> ul > li.cab {
         float: left;
     }
@@ -135,6 +137,7 @@ header > a > img {
         border: 2px solid;
         background: var(--gris-claro);
     }
+
 /*footer*/
     body > footer{
         margin-top: 4em;
@@ -150,8 +153,9 @@ header > a > img {
         color: var(--amarillo-oscuro);
     }
     body > footer > a:hover{
-        color: var(--blanco);
+        color: var(--negro);
     }
+
 /*BOTONES*/
     input.boton {
         text-decoration:none;
@@ -174,6 +178,49 @@ header > a > img {
         background-color: var(--negro);
         color: var(--blanco);
     }
+    input.botonbuscar{
+        text-decoration:none;
+        font-size: 1em;
+        color: var(--negro);
+        padding-top:.5em;
+        padding-bottom:.5em;
+        padding-left:2em;
+        padding-right:2em;
+        background-color: var(--amarillo-claro2);
+        border-color: var(--amarillo);
+        border-style: solid;
+        float: left;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+    
+    input.botonbuscar:hover {
+        background-color: var(--negro);
+        color: var(--blanco);
+    }
+
+    input.botonenviar{
+        text-decoration:none;
+        font-size: 1em;
+        color: var(--negro);
+        padding-top:.5em;
+        padding-bottom:.5em;
+        padding-left:2em;
+        padding-right:2em;
+        background-color: var(--amarillo-claro2);
+        border-color: var(--amarillo);
+        border-style: solid;
+        float: left;
+        margin-right: 2em;
+    }
+    
+    input.botonenviar:hover {
+        background-color: var(--negro);
+        color: var(--blanco);
+    }
+
+
+
     form#formulario > fieldset > ul > li > label > input#foto{
         display: none;
     }
@@ -188,23 +235,27 @@ header > a > img {
         background-color: var(--negro);
         color: var(--blanco);
     }
+
 /*PARA BARRA PASAR PAGINAS*/
     .barrapags > nav > ul{
+        display: flex;
+        justify-content: center;
         list-style-type: none;
-        margin: 0;
-        padding: 0;
         overflow: hidden;
         background-color: var(--amarillo-claro2);
-        margin-bottom: 3em;
         margin-top: 1.5em;
+        padding: 0;
     }
+
     .barrapags > nav> ul > li {
         float: left;
         border-right: 1px solid var(--blanco);
     }
-    .barrapags > nav> ul > li:last-child {
-        border-right: none;
+
+    .barrapags > nav> ul > li > a.primera {
+        border-left: 1px solid var(--blanco);
     }
+    
     .barrapags > nav > ul > li > a{
         display: block;
         color: var(--negro);
@@ -217,10 +268,11 @@ header > a > img {
         font-weight: bold;
         background-color: var(--negro);
     }
+
 /*INDEX*/
     body > h2{
         text-align: center;
-        margin-top: 3em;
+        margin-top: 2em;
     }
     body > section.fotosindex > article{
         width: 33%;
@@ -228,10 +280,12 @@ header > a > img {
         display: inline-block;
         border: .1em solid var(--amarillo-oscuro);
         background-color: var(--blanco);
-        margin-top: 2em;
+        margin-top: 1em;
     }
     body > section.fotosindex {
         margin-top: 2em; 
+        padding-left: 5em;
+        padding-right: 5em;
     }
     body > section.fotosindex > article > a {
         width: 12em;
@@ -261,6 +315,161 @@ header > a > img {
         padding: 1.6em;
         margin-bottom: 0;
     }
+
+/*BUSCAR*/
+input#nombrebuscar{
+    font-size: .9em;
+    height: 2em;
+    width: 15em;
+}
+
+/*PUBLICACIÓN*/
+img.imgpubli{
+    padding-top: 2em;
+    max-width: 30%;
+    min-width: 0px;
+    display: block;
+    margin: 0 auto;
+    height: fit-content;
+}
+div.textopubli{
+    text-align: justify;
+}
+fieldset.publi{
+    margin: 0 auto;
+    max-width: 100em;
+    min-width: auto;
+    padding-right: 2em;
+    padding-left: 2em;
+}
+
+fieldset.comentsolo{
+    max-width: 100em;
+    min-width: auto;
+    border-radius: 10px;
+    margin-bottom: 3em;
+    padding-right: 2em;
+    padding-left: 2em;
+}
+
+textarea#Comment{
+    resize:none;
+    font-size: medium;
+    max-width: 100%;
+    min-width: 0px;
+    height: 150px;
+    text-align: center;
+}
+
+div.cajatext{
+    margin: 0 auto;
+    max-width: 100em;
+    min-width: 0em;
+}
+
+div.megusta{
+    height: 30px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+div.megusta > p{
+    margin-right: .7em;
+}
+
+fieldset.comentsolo > legend{
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+fieldset.comentsolo > legend > p.autorcoment{
+    margin-left: .5em;
+    margin-right: .5em;
+}
+
+fieldset.comentsolo > legend > img{
+    margin-left: .5em;
+    border-radius: 50%;
+    width: 2em;
+    height: fit-content;
+}
+
+fieldset.publi > article > h4 > a{
+    color: var(--amarillo);
+}
+
+fieldset.publi > article > h4 > a:hover{
+    color: var(--negro);
+}
+
+fieldset.publi > article > p{
+    margin: 0;
+}
+
+p.fechacoment{
+    font-style: italic;
+    color: #868583;
+}
+
+div.titulo{
+    text-align: left;
+}
+
+div.titulo > h2, div.titulo > p{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+div.titulo > p{
+    margin-left: .7em;
+}
+
+div.titulo > p > a{
+    text-decoration: none;
+    color: var(--amarillo);
+}
+
+div.titulo > p > a:hover{
+    color: var(--negro);
+}
+
+div.num{
+    text-align: left;
+}
+
+a.numcomentarios{
+    margin-right: 2em;
+    text-decoration: none;
+    color: var(--amarillo);
+}
+
+a.numcomentarios:hover{
+    color: var(--negro);
+}
+
+/*FONTELLO*/
+div.megusta > span.icon-thumbs-up{
+    font-size: 25px;
+    transition: transform 0.05s ease-in-out;
+    cursor: pointer; 
+}
+div.megusta > span.icon-thumbs-up:active{
+    transform: scale(0.8);
+}
+
+div.megusta > span.icon-thumbs-down{
+    font-size: 25px;
+    transition: transform 0.05s ease-in-out;
+    cursor: pointer; 
+}
+
+div.megusta > span.icon-thumbs-down:active{
+    transform: scale(0.8);
+}
+
 /*ACERCA DE*/
     fieldset.acercade {
         text-align: center;
@@ -268,6 +477,7 @@ header > a > img {
     fieldset.acercade > p{
         text-align: center;
     }
+
 /*menu hamborguesa*/
 #menu-checked, #menu{
     display: none;
@@ -275,6 +485,8 @@ header > a > img {
 @media only screen and (max-width: 480px) {
     .navegacion > label {
         display: none;
+        margin-top:1.5em;
+        margin-bottom: 3em;
     }
     .navegacion > nav>  ul > li{
         display: block;
@@ -299,7 +511,6 @@ header > a > img {
         display: block;
         background-color: var(--amarillo-claro2);
         padding: 2em;
-        width: 100%;
     }
     #menu-checked:checked ~ label #abrir{
         display: none;
@@ -378,68 +589,3 @@ header > a > img {
     opacity: 1;
 }
 
-/* Boton busqueda*/
-input.botonbuscar{
-    text-decoration:none;
-    font-size: 1em;
-    color: var(--negro);
-    padding-top:.5em;
-    padding-bottom:.5em;
-    padding-left:2em;
-    padding-right:2em;
-    background-color: var(--amarillo-claro2);
-    border-color: var(--amarillo);
-    border-style: solid;
-    float: left;
-    margin-top: 1em;
-    margin-bottom: 1em;
-}
-
-input.botonbuscar:hover {
-    background-color: var(--negro);
-    color: var(--blanco);
-}
-
-input#nombrebuscar{
-    font-size: .9em;
-    height: 2em;
-    width: 15em;
-}
-
-img.prueba{
-    width: 30em;
-    display: block;
-    margin: 0 auto;
-    height: fit-content;
-}
-
-div.textopubli{
-    text-align: justify;
-}
-
-fieldset.publi{
-    margin: 0 auto;
-    width: 100em;
-    padding-right: 2em;
-    padding-left: 2em;
-}
-
-fieldset.comentsolo{
-    margin-bottom: 3em;
-    padding-right: 2em;
-    padding-left: 2em;
-}
-
-textarea#Comment{
-    font-size: medium;
-    width: 500px;
-    height: 150px;
-    text-align: center;
-}
-
-div.pruebaa{
-    margin: 0 auto;
-    width: 100em;
-    padding-right: 0em;
-    padding-left: 0em;
-}
