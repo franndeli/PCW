@@ -39,24 +39,31 @@
             </div>
         </header>
         
-        <form id="formulario" action="inedx.html" method="post">
+        <form id="formulario" action="index.html" method="post">
             <fieldset>
                 <legend>Añade una publicación</legend>
                     <ul>
-                        <li><p><span class="icon-right-open"></span><label>Título</p><input type="text" class="campodestacado" id="titulo" name="titulo" maxlength="200" placeholder="Ingrese un titulo" required></label><br></li>
-                        <li><p><span class="icon-doc-text-inv"></span><label>Texto</p><input type="text" class="campodestacado" id="texto" name="texto" maxlength="100" placeholder="Ingrese una descripción" required></label><br></li>
-                        <li><p><span class="icon-location"></span><label>Ubicación</p><input list="browsers" class="campodestacado" id="ubi" name="ubi" placeholder="Seleccione ubicación" required></label><br>
+                        <li><p><span class="icon-right-open"></span><label>Título</p><input type="text" class="campodestacado" id="titulo" name="titulo" maxlength="200" minlength="1" placeholder="Ingrese un titulo" required></label><br></li>
+                        <li><p><span class="icon-doc-text-inv"></span><label>Texto</p><input type="text" class="campodestacado" id="texto" name="texto" minlength="1" placeholder="Ingrese una descripción" required></label><br></li>
+                        <li><p><span class="icon-location"></span><label>Ubicación</p><input list="browsers" class="campodestacado" id="ubi" name="ubi" maxlength="100" placeholder="Seleccione ubicación" required></label><br>
                         <datalist id="browsers">
                             <option value="Murcia">
                             <option value="Cartagena">
                             <option value="Jumilla">
                             <option value="Caravaca">
                         </datalist></li>
-                        <li><p><span class="icon-picture"></span>Foto</p><label for="foto" class="subir">Subir archivo</label>
-                            <input type="file" id="foto" accept="image/*" style='display: none;'><br>
-                            <img src="imagenes/nofoto.png" alt="foto" width="80"></label> 
+                        <li><p><span class="icon-picture"></span>Foto</p><label for="foto" class="subir">
+                            <i class="idk"></i>Subir archivo
+                        </label>
+                            <input type="file" id="foto" value="" accept="image/*" style='display: none;'><br>
+                            </label> 
                             <input class="boton" type="reset" value="Borrar">
-                        </li>
+                            <div class="image-upload">
+                                <label for="file-input">
+                                    <img src="imagenes/nofoto.png" alt ="defecto" width="70" > 
+                                </label>
+                                    <input id="file-input" name="foto" type="file" accept="image/*" style='display: none;'/>
+                            </div></li>
                     </ul>
                     <input class="boton" type="submit"  value="Enviar" >
                     <input class="boton" type="reset" value="Borrar">
@@ -64,7 +71,7 @@
         </form>
         
         <footer>
-            <p>&copy; Celia Gómez, Francisco José Delicado - 2023 - correo - numero</p>
+            <p>&copy; Celia Gómez, Francisco José Delicado - 2023 </p>
             <a href="acerca.html">Acerca de</a>
         </footer>
     </body>

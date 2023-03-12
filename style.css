@@ -27,6 +27,11 @@
         text-overflow: ellipsis;
     }
 
+    h3 a{
+        text-decoration: none;
+        color:var(--negro);
+    }
+
 /*cabecera imagen, titulo y sub*/
 /*header {
     margin-top: 2em;
@@ -224,11 +229,10 @@ header > a > img {
         color: var(--blanco);
     }
 
-
-
     form#formulario > fieldset > ul > li > label > input#foto{
         display: none;
     }
+
     .subir{
         padding: 5px 10px;
         background: var(--amarillo-claro2);
@@ -416,7 +420,7 @@ fieldset.publi > article > p{
 
 p.fechacoment{
     font-style: italic;
-    color: #868583;
+    color: var(--gris);
 }
 
 div.titulo{
@@ -475,14 +479,49 @@ div.megusta > span.icon-thumbs-down:active{
     transform: scale(0.8);
 }
 
-/*ACERCA DE*/
-    fieldset.acercade {
-        text-align: center;
-    }
-    fieldset.acercade > p{
-        text-align: center;
-    }
+/*Acerca de*/
+fieldset.acercade{
+    margin: 2em;
+    padding: 1em;
+}
 
+/*Media Query*/
+@media only screen and (max-width: 1551px) {
+    body > section.fotosindex > article > div.imagen > a > img{
+        margin-top: 1.5em;
+        width: 15em;
+        height: 11em;
+    }
+    body > section.fotosindex > article{
+        width:100%;
+        vertical-align: top;
+        display: inline-block;
+        border: .1em solid var(--amarillo-oscuro);
+        background-color: var(--blanco);
+        margin-top: 2em;
+    }
+}
+/*para que se vean solo iconitos*/
+@media only screen and (max-width: 1030px){
+    header > div.navegacion > nav > ul > li.cab2 > a.icon-home > span {
+        display: none;
+    }
+    header > div.navegacion > nav > ul > li.cab2 > a.icon-search > span {
+        display: none;
+    }
+    header > div.navegacion > nav > ul > li.cab2 > a.icon-plus > span {
+        display: none;
+    }
+    header > div.navegacion > nav > ul > li.cab2 > a.icon-user > span {
+        display: none;
+    }
+    header > div.navegacion > nav > ul > li.cab2 > a.icon-user-add > span {
+        display: none;
+    }
+    header > div.navegacion > nav > ul > li.cab2 > a.icon-user-delete > span {
+        display: none;
+    }
+}
 /*menu hamborguesa*/
 #menu-checked, #menu{
     display: none;
@@ -531,10 +570,17 @@ div.megusta > span.icon-thumbs-down:active{
         align-items: center;
         display: none;
     }
+    body > section.fotosindex {
+        margin-top: 2em;
+        padding-left: 0em;
+        padding-right:0em;
+    }
     body > section.fotosindex > article > div.imagen > a > img{
         margin-top: 1.5em;
-        width: 8em;
-        height: 6em;
+        margin-left: 1em;
+        margin-right: 1em;
+        width: 15em;
+        height: 9em;
     }
     form#formulario {
         margin-top: 20px;
@@ -545,44 +591,30 @@ div.megusta > span.icon-thumbs-down:active{
         margin-top: 2em;   
     }
 }
-@media only screen and (max-width: 1410px) {
-    body > section.fotosindex > article > div.imagen > a > img{
-        margin-top: 1.5em;
-        width: 15em;
-        height: 11em;
+@media only screen and (max-width: 315px) { 
+    body > section.fotosindex {
+        margin-top: 2em;
+        padding-left: 0em;
+        padding-right:0em;
     }
     body > section.fotosindex > article{
-        width:100%;
-        vertical-align: top;
-        display: inline-block;
-        border: .1em solid var(--amarillo-oscuro);
-        background-color: var(--blanco);
-        margin-top: 2em;
+        width: 15em;
+        padding-left: 0;
     }
-    fieldset.acercade {
-        text-align: center;
-        margin-top: 2em ;
+    body > section.fotosindex > article > div.imagen > a > img{
+        margin-top: 1.5em;
+        margin-left: 1em;
+        margin-right: 1em;
+        width: 11em;
+        height: 7em;
     }
-}
-/*para que se vean solo iconitos*/
-@media only screen and (max-width: 1030px){
-    header > div.navegacion > nav > ul > li.cab2 > a.icon-home > span {
-        display: none;
+    form#formulario {
+        margin-top: 20px;
+        width: 20em;
+        margin: 0 auto;
     }
-    header > div.navegacion > nav > ul > li.cab2 > a.icon-search > span {
-        display: none;
-    }
-    header > div.navegacion > nav > ul > li.cab2 > a.icon-plus > span {
-        display: none;
-    }
-    header > div.navegacion > nav > ul > li.cab2 > a.icon-user > span {
-        display: none;
-    }
-    header > div.navegacion > nav > ul > li.cab2 > a.icon-user-add > span {
-        display: none;
-    }
-    header > div.navegacion > nav > ul > li.cab2 > a.icon-user-delete > span {
-        display: none;
+    form#formulario > fieldset{
+        margin-top: 2em;   
     }
 }
 /* Tooltip*/
