@@ -112,9 +112,6 @@ header > a > img {
         margin-top: 1em;
         padding-inline-start: 40px;
     }
-    form#formulario > fieldset > ul > li > label > input:hover{
-        color: var(--amarillo);
-    }
     form#formulario > fieldset > legend {
         font-weight: bold;
         margin-top: 10%;
@@ -130,6 +127,14 @@ header > a > img {
     }
     form#formulario > fieldset > ul > li > p {
         margin-left: 0;
+    }
+    input.campodestacado:hover{
+        border: 2px solid var(--amarillo);
+        border-radius: 5px;
+    }
+    select.campodestacado:hover{
+        border: 2px solid var(--amarillo);
+        border-radius: 5px;
     }
     
 /*para que destaquen los campos focus*/
@@ -588,4 +593,3 @@ div.megusta > span.icon-thumbs-down:active{
 .tooltip:hover::before {
     opacity: 1;
 }
-

@@ -42,10 +42,10 @@
             <fieldset>
                 <legend>Registrate</legend>
                     <ul>
-                        <li><p><span class="icon-right-open"></span><label>Nombre</p><input type="text" id="nombre" name="nombre" autofocus="autofocus" required></label><br></li>
-                        <li><p><span class="icon-user"></span><label>Login</p><input type="text" id="login" name="login" minlength="4" maxlength="20" pattern="[A-Za-z0-9]+" required></label><br></li>
-                        <li><p><span class="icon-key"></span><label>Contraseña</p><input type="password" id="password" name="password" minlength="4" maxlength="20" pattern="[A-Za-z0-9-\.-\_]+" required></label><br></li>
-                        <li><p><span class="icon-key"></span><label>Repetir contraseña</p><input type="password" id="password2" name="password2" minlength="4" maxlength="20" ></label><br></li>
+                        <li><p><span class="icon-right-open"></span><label>Nombre</p><input type="text" class="campodestacado" id="nombre" name="nombre" autofocus="autofocus" placeholder="Ingrese un nombre" required></label><br></li>
+                        <li><p><span class="icon-user"></span><label>Login</p><input type="text" class="campodestacado" id="login" name="login" minlength="4" maxlength="20" pattern="^[a-zA-Z][A-Za-z0-9]*$" placeholder="Ingrese un nombre de usuario" required></label><br></li>
+                        <li><p><span class="icon-key"></span><label>Contraseña</p><input type="password" class="campodestacado" id="password" name="password" minlength="4" maxlength="20" pattern="^[a-zA-Z0-9_\-\.]+$" placeholder="Ingrese una contraseña" required ></label><br></li>
+                        <li><p><span class="icon-key"></span><label>Repetir contraseña</p><input type="password" class="campodestacado" id="password2" name="password2" minlength="4" maxlength="20" placeholder="Repita su contraseña"></label><br></li>
                         <li><p><span class="icon-picture"></span>Foto</p><label for="foto" class="subir">
                             <i class="idk"></i>Subir archivo
                         </label>
