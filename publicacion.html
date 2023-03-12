@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <link rel="stylesheet" href="fontello/css/fontello.css"/>
-    <link href="style.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fontello/css/fontello.css">
+    <link href="style.css" rel="stylesheet">
     <meta charset="UTF-8">
     <link rel="icon" href="imagenes/logo.png"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,7 +18,7 @@
             <!-- esto es para el menu hamborguesa-->
             <input type="checkbox" id="menu-checked">
             <label id="menu" for="menu-checked">
-                <span id="abrir">&#9776</span>
+                <span id="abrir">&#9776;</span>
                 <span id="cerrar">X</span>
             </label> 
             <nav>
@@ -58,29 +60,29 @@
                     También es vital tener un plan de evacuación claro y conciso en caso de que ocurra una emergencia. Es recomendable que cada vecino tenga conocimiento de las rutas de escape y puntos de reunión en caso de un incendio u otra situación de emergencia.
                 </p>
                 <p>   
-                    En momentos como estos, es importante mantener la calma y colaborar con las autoridades para evitar daños mayores. Esperamos que los vecinos afectados por el incendio puedan recuperarse pronto y encontrar una solución a sus necesidades. Sigamos trabajando juntos para mantener nuestra comunidad segura y unida.</p>
+                    En momentos como estos, es importante mantener la calma y colaborar con las autoridades para evitar daños mayores. Esperamos que los vecinos afectados por el incendio puedan recuperarse pronto y encontrar una solución a sus necesidades. Sigamos trabajando juntos para mantener nuestra comunidad segura y unida.
                 </p>
             </div>
-                <img class="imgpubli" src="imagenes/foto1.jpg" alt="incendio"></a>
-            <br></br>
+                <img class="imgpubli" src="imagenes/foto1.jpg" alt="incendio">
+            <br>
         </article>
             <div class="megusta">
-                <p class="coment"><a href="#Comentarios" class="numcomentarios">2 cometario(s)</a></article></p>
+                <p class="coment"><a href="#Comentarios" class="numcomentarios">2 cometario(s)</a></p>
                 <span class="icon-thumbs-up"></span><p>5</p> 
                 <span class="icon-thumbs-down"></span><p>0</p>
             </div>
     </fieldset>
 
-    <br></br>
+    <br>
 
     <fieldset class="publi">
-        <h2 name="Comentarios" id="Comentarios">Comentarios</h2>
+        <h2>Comentarios</h2>
             <fieldset class="comentsolo">
                 <legend>
                     <img src="imagenes/imgperfil1.png" alt="fotoperfil1">
-                    <p class="autorcoment">Pepa Martínez</p>
+                    Pepa Martínez
                 </legend>
-                <article>
+                <div>
                     <div class="textopubli">
                         <p>¡Hola a todos! Como vecina afectada por el incendio en la calle Santa Fe, quiero expresar mi agradecimiento a todos los que nos han brindado su apoyo en estos momentos difíciles. Aunque ha sido una experiencia muy traumática, estamos agradecidos de que no haya habido víctimas mortales.</p>
                         <p>Agradezco la rápida acción de los bomberos, quienes trabajaron arduamente para controlar el fuego y proteger a todos los residentes del edificio. También quiero agradecer a nuestros vecinos por su solidaridad y ayuda en medio de esta situación.</p>
@@ -90,15 +92,15 @@
                         <p>Espero que este incidente sirva como un llamado de atención para todos los vecinos de nuestra comunidad y nos impulse a trabajar juntos para mantener nuestra comunidad segura y protegida. Gracias de nuevo a todos los que nos han apoyado en estos momentos difíciles.</p>
                         <p class="fechacoment"><span class="icon-calendar"></span>26 de Febreo de 2023, 12:36H</p>
                     </div>
-                </article>
+                </div>
             </fieldset>
 
             <fieldset class="comentsolo">
                 <legend>
                     <img src="imagenes/imgperfil1.png" alt="fotoperfil1">
-                    <p class="autorcoment"> Francisco González</p>
+                    Francisco González
                 </legend>
-                <article>
+                <div>
                     <div class="textopubli">
                         <p>Querida comunidad,</p>
                         <p>Estoy profundamente triste al enterarme del incendio que afectó a la comunidad de la calle Santa Fe. Aunque no vivo allí, conozco a una persona que ha sido afectada por este desastre y sé lo difícil que puede ser para ella.</p>
@@ -110,7 +112,7 @@
                         <p>Sigamos apoyándonos mutuamente y trabajando juntos para hacer de nuestra comunidad un lugar más seguro y unido.</p>
                     </div>
                     <p class="fechacoment"><span class="icon-calendar"></span>3 de Marzo de 2023, 17:29H</p>
-                </article>
+                </div>
             </fieldset>
     </fieldset>
 
@@ -118,18 +120,16 @@
 
     <div class="cajatext">
         <textarea id="Comment" cols="50" maxlength="250" minlength="1" name="WriteComment" placeholder="Deja aquí tu comentario"></textarea>
-        <p><input class="botonenviar" type="submit"  value="Enviar"><p></p><input class="botonenviar" type="submit"  value="Limpiar" onclick="document.getElementById('Comment').value = ''"></p>
+        <p><input class="botonenviar" type="submit"  value="Enviar"></p><p><input class="botonenviar" type="submit"  value="Limpiar" onclick="document.getElementById('Comment').value = ''"></p>
     </div>
 
     <br><br><br>
 
-    <p>
-        <fieldset class="publi">
-            <article>
-                <h4>Tienes que estar logueado para dejar un comentario. <a href="login.html">Inicia sesión o Regístrate</a></h4>
-            </article>
-        </fieldset>
-    </p>
+    <fieldset class="publi">
+        <article>
+            <h4>Tienes que estar logueado para dejar un comentario. <a href="login.html">Inicia sesión o Regístrate</a></h4>
+        </article>
+    </fieldset>
     
 
     <footer>

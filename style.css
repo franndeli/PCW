@@ -1,36 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+:root{
+    --gris-claro: #D6D3D3;
+    --gris: #B0ADAA;
+    --amarillo-oscuro: #E3C04D;
+    --amarillo: #E9CD6A;
+    --amarillo-claro: #EEE5A2;
+    --amarillo-claro2: #EDE9C1;
+    --negro: black;
+    --blanco: white;
+}
+*{
+    font-family: 'Roboto', sans-serif;
+}
+h1{
+    font-family: 'Abril Fatface', cursive;
+}
+h4{
+    text-align: center;
+}
+h3{
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 
-    :root{
-        --gris-claro: #D6D3D3;
-        --gris: #B0ADAA;
-        --amarillo-oscuro: #E3C04D;
-        --amarillo: #E9CD6A;
-        --amarillo-claro: #EEE5A2;
-        --amarillo-claro2: #EDE9C1;
-        --negro: black;
-        --blanco: white;
-    }
-    *{
-        font-family: 'Roboto', sans-serif;
-    }
-    h1{
-        font-family: 'Abril Fatface', cursive;
-    }
-    h4{
-        text-align: center;
-    }
-    h3{
-        text-align: center;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-    }
-
-    h3 a{
-        text-decoration: none;
-        color:var(--negro);
-    }
+h3 a{
+    text-decoration: none;
+    color:var(--negro);
+}
 
 /*cabecera imagen, titulo y sub*/
 /*header {
@@ -54,276 +51,279 @@ header > a > img {
     border-left: 1px solid var(--blanco);
 }*/
 
-    .navegacion > nav> ul > li.cab {
-        float: left;
-    }
-    .navegacion > nav> ul > li.cab > a > img{
-        width: 4em;
-        height: 4em;
-        margin-left: 3em;
-        margin-top: .5em;   
-    }
-    .navegacion > nav> ul > li > h1{
-        display: inline-block;
-        margin-top: .5em;
-        margin-left: 0.7em;
-        font-size: 1.5em;
-        margin-bottom: 0em;
-        margin-right: .5em;
-    }
-    .navegacion > nav> ul > li > h2{
-        margin-left: 5em;
-        font-size: small;
-    }
-    .navegacion > nav > ul{
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: var(--amarillo-claro2);
-        margin-bottom: 3em;
-        margin-top: 1.5em;
-    }
-    .navegacion > nav> ul > li { 
-        float: left;
-    }
-    .navegacion > nav> ul > li.cab2:last-child {
-        border-right: none;
-    }
-    .navegacion > nav > ul > li.cab2 > a{
-        display: block;
-        color: var(--negro);
-        text-align: center;
-        padding: 2em;
-        text-decoration: none;
-    }
-    .navegacion >nav>  ul > li.cab2:hover a{
-        color: var(--blanco); 
-        font-weight: bold;
-        background-color: var(--negro);
-    }
+.navegacion > nav> ul > li.cab {
+    float: left;
+}
+.navegacion > nav> ul > li.cab > a > img{
+    width: 4em;
+    height: 4em;
+    margin-left: 3em;
+    margin-top: .5em;   
+}
+.navegacion > nav> ul > li > h1{
+    display: inline-block;
+    margin-top: .5em;
+    margin-left: 0.7em;
+    font-size: 1.5em;
+    margin-bottom: 0em;
+    margin-right: .5em;
+}
+.navegacion > nav> ul > li > h2{
+    margin-left: 5em;
+    font-size: small;
+}
+.navegacion > nav > ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--amarillo-claro2);
+    margin-bottom: 3em;
+    margin-top: 1.5em;
+}
+.navegacion > nav> ul > li { 
+    float: left;
+}
+.navegacion > nav> ul > li.cab2:last-child {
+    border-right: none;
+}
+.navegacion > nav > ul > li.cab2 > a{
+    display: block;
+    color: var(--negro);
+    text-align: center;
+    padding: 2em;
+    text-decoration: none;
+}
+.navegacion >nav>  ul > li.cab2:hover a{
+    color: var(--blanco); 
+    font-weight: bold;
+    background-color: var(--negro);
+}
 
 /*PARA FORMULARIOS*/
-    form#formulario {
-        width: 30em;
-        margin: 0 auto;
-    }
-    form#formulario {
-        background-color: var(--blanco);
-        list-style: none;
-    }
-    form#formulario > fieldset > ul {
-        list-style: none;
-        margin-top: 1em;
-        padding-inline-start: 40px;
-    }
-    form#formulario > fieldset > legend {
-        font-weight: bold;
-        margin-top: 10%;
-    }
-    form#formulario > h4 {
-        text-align: center;
-    }
-    form#formulario > h4 > a{
-        color: var(--amarillo);
-    }
-    form#formulario > h4 > a:hover{
-        color: var(--negro);
-    }
-    form#formulario > fieldset > ul > li > p {
-        margin-left: 0;
-    }
-    input.campodestacado:hover{
-        border: 2px solid var(--amarillo);
-        border-radius: 5px;
-    }
-    select.campodestacado:hover{
-        border: 2px solid var(--amarillo);
-        border-radius: 5px;
-    }
-    
+form#formulario {
+    width: 30em;
+    margin: 0 auto;
+}
+form#formulario {
+    background-color: var(--blanco);
+    list-style: none;
+}
+form#formulario > fieldset > ul {
+    list-style: none;
+    margin-top: 1em;
+    padding-inline-start: 40px;
+}
+form#formulario > fieldset > legend {
+    font-weight: bold;
+    margin-top: 10%;
+}
+form#formulario > h4 {
+    text-align: center;
+}
+form#formulario > h4 > a{
+    color: var(--amarillo);
+}
+form#formulario > h4 > a:hover{
+    color: var(--negro);
+}
+form#formulario > fieldset > ul > li > p {
+    margin-left: 0;
+}
+form#formulario > fieldset > ul > li {
+    margin-top: 1em;
+}
+input.campodestacado:hover{
+    border: 2px solid var(--amarillo);
+    border-radius: 5px;
+}
+select.campodestacado:hover{
+    border: 2px solid var(--amarillo);
+    border-radius: 5px;
+}
+
 /*para que destaquen los campos focus*/
-    input:focus{
-        border: 2px solid;
-        background: var(--gris-claro);
-    }
+input:focus{
+    border: 2px solid;
+    background: var(--gris-claro);
+}
 
 /*footer*/
-    body > footer{
-        margin-top: 4em;
-        background-color: var(--amarillo-claro2);
-        padding: 1em;
-        text-align: center;
-    }
-    body > footer > p{
-        margin:  0;
-        color: var(--negro);
-    }
-    body > footer > a{
-        color: var(--amarillo-oscuro);
-    }
-    body > footer > a:hover{
-        color: var(--negro);
-    }
+body > footer{
+    margin-top: 4em;
+    background-color: var(--amarillo-claro2);
+    padding: 1em;
+    text-align: center;
+}
+body > footer > p{
+    margin:  0;
+    color: var(--negro);
+}
+body > footer > a{
+    color: var(--amarillo-oscuro);
+}
+body > footer > a:hover{
+    color: var(--negro);
+}
 
 /*BOTONES*/
-    input.boton {
-        text-decoration:none;
-        font-size: 1em;
-        color: var(--negro);
-        padding-top:.5em;
-        padding-bottom:.5em;
-        padding-left:2em;
-        padding-right:2em;
-        background-color: var(--amarillo-claro2);
-        border-color: var(--amarillo);
-        border-style: solid;
-        float: left;
-        margin-top: 1em;
-        margin-bottom: 1em;
-        margin-left: 1em;
-        margin-right: 1em;
-    }
-    input.boton:hover {
-        background-color: var(--negro);
-        color: var(--blanco);
-    }
-    input.botonbuscar{
-        text-decoration:none;
-        font-size: 1em;
-        color: var(--negro);
-        padding-top:.5em;
-        padding-bottom:.5em;
-        padding-left:2em;
-        padding-right:2em;
-        background-color: var(--amarillo-claro2);
-        border-color: var(--amarillo);
-        border-style: solid;
-        float: left;
-        margin-top: 1em;
-        margin-bottom: 1em;
-    }
-    
-    input.botonbuscar:hover {
-        background-color: var(--negro);
-        color: var(--blanco);
-    }
+input.boton {
+    text-decoration:none;
+    font-size: 1em;
+    color: var(--negro);
+    padding-top:.5em;
+    padding-bottom:.5em;
+    padding-left:2em;
+    padding-right:2em;
+    background-color: var(--amarillo-claro2);
+    border-color: var(--amarillo);
+    border-style: solid;
+    float: left;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+input.boton:hover {
+    background-color: var(--negro);
+    color: var(--blanco);
+}
+input.botonbuscar{
+    text-decoration:none;
+    font-size: 1em;
+    color: var(--negro);
+    padding-top:.5em;
+    padding-bottom:.5em;
+    padding-left:2em;
+    padding-right:2em;
+    background-color: var(--amarillo-claro2);
+    border-color: var(--amarillo);
+    border-style: solid;
+    float: left;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
 
-    input.botonenviar{
-        text-decoration:none;
-        font-size: 1em;
-        color: var(--negro);
-        padding-top:.5em;
-        padding-bottom:.5em;
-        padding-left:2em;
-        padding-right:2em;
-        background-color: var(--amarillo-claro2);
-        border-color: var(--amarillo);
-        border-style: solid;
-        float: left;
-        margin-right: 2em;
-    }
-    
-    input.botonenviar:hover {
-        background-color: var(--negro);
-        color: var(--blanco);
-    }
+input.botonbuscar:hover {
+    background-color: var(--negro);
+    color: var(--blanco);
+}
 
-    form#formulario > fieldset > ul > li > label > input#foto{
-        display: none;
-    }
+input.botonenviar{
+    text-decoration:none;
+    font-size: 1em;
+    color: var(--negro);
+    padding-top:.5em;
+    padding-bottom:.5em;
+    padding-left:2em;
+    padding-right:2em;
+    background-color: var(--amarillo-claro2);
+    border-color: var(--amarillo);
+    border-style: solid;
+    float: left;
+    margin-right: 2em;
+}
 
-    .subir{
-        padding: 5px 10px;
-        background: var(--amarillo-claro2);
-        color:var(--negro);
-        border:.1em solid var(--amarillo);
-        margin-left: 1em;
-    }
-    .subir:hover{
-        background-color: var(--negro);
-        color: var(--blanco);
-    }
+input.botonenviar:hover {
+    background-color: var(--negro);
+    color: var(--blanco);
+}
+
+form#formulario > fieldset > ul > li > label > input#foto{
+    display: none;
+}
+
+.subir{
+    padding: 5px 10px;
+    background: var(--amarillo-claro2);
+    color:var(--negro);
+    border:.1em solid var(--amarillo);
+    margin-left: 1em;
+}
+.subir:hover{
+    background-color: var(--negro);
+    color: var(--blanco);
+}
 
 /*PARA BARRA PASAR PAGINAS*/
-    .barrapags > nav > ul{
-        display: flex;
-        justify-content: center;
-        list-style-type: none;
-        overflow: hidden;
-        background-color: var(--amarillo-claro2);
-        margin-top: 1.5em;
-        padding: 0;
-    }
+.barrapags > nav > ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: var(--amarillo-claro2);
+    margin-top: 1.5em;
+    padding: 0;
+}
 
-    .barrapags > nav> ul > li {
-        float: left;
-        border-right: 1px solid var(--blanco);
-    }
+.barrapags > nav> ul > li {
+    float: left;
+    border-right: 1px solid var(--blanco);
+}
 
-    .barrapags > nav> ul > li > a.primera {
-        border-left: 1px solid var(--blanco);
-    }
-    
-    .barrapags > nav > ul > li > a{
-        display: block;
-        color: var(--negro);
-        text-align: center;
-        padding: 1em;
-        text-decoration: none;
-    }
-    .barrapags >nav>  ul > li:hover a{
-        color: var(--blanco); 
-        font-weight: bold;
-        background-color: var(--negro);
-    }
+.barrapags > nav> ul > li > a.primera {
+    border-left: 1px solid var(--blanco);
+}
+
+.barrapags > nav > ul > li > a{
+    display: block;
+    color: var(--negro);
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+}
+.barrapags >nav>  ul > li:hover a{
+    color: var(--blanco); 
+    font-weight: bold;
+    background-color: var(--negro);
+}
 
 /*INDEX*/
-    body > h2{
-        text-align: center;
-        margin-top: 2em;
-    }
-    body > section.fotosindex > article{
-        width: 33%;
-        vertical-align: top;
-        display: inline-block;
-        border: .1em solid var(--amarillo-oscuro);
-        background-color: var(--blanco);
-        margin-top: 1em;
-    }
-    body > section.fotosindex {
-        margin-top: 2em; 
-        padding-left: 5em;
-        padding-right: 5em;
-    }
-    body > section.fotosindex > article > a {
-        width: 12em;
-        height: 10em;
-        display: flex;
-    }
-    body > section.fotosindex > article:hover {
-        transition: transform .2s;
-        -webkit-transform:scale(1.1);transform:scale(1.1);
-    }
-    body > section.fotosindex > article {
-        overflow: hidden;
-    }
-    body > section.fotosindex > article > p{
-        text-align: center;
-        margin-top: 0;
-    }
-    body > section.fotosindex > article > div.imagen{
-        text-align: center;
-    }
-    body > section.fotosindex > article > div.imagen > a > img{
-        margin-top: 1.5em;
-        width: 20em;
-        height: 15em;
-    }
-    body > section.fotosindex > article > span.tooltip > h3{
-        padding: 1.6em;
-        margin-bottom: 0;
-    }
+body > h2{
+    text-align: center;
+    margin-top: 2em;
+}
+body > div.fotosindex > article{
+    width: 33%;
+    vertical-align: top;
+    display: inline-block;
+    border: .1em solid var(--amarillo-oscuro);
+    background-color: var(--blanco);
+    margin-top: 1em;
+}
+body > div.fotosindex {
+    margin-top: 2em; 
+    padding-left: 5em;
+    padding-right: 5em;
+}
+body > div.fotosindex > article > a {
+    width: 12em;
+    height: 10em;
+    display: flex;
+}
+body > div.fotosindex > article:hover {
+    transition: transform .2s;
+    transform:scale(1.1);
+}
+body > div.fotosindex > article {
+    overflow: hidden;
+}
+body > div.fotosindex > article > p{
+    text-align: center;
+    margin-top: 0;
+}
+body > div.fotosindex > article > div.imagen{
+    text-align: center;
+}
+body > div.fotosindex > article > div.imagen > a > img{
+    margin-top: 1.5em;
+    width: 20em;
+    height: 15em;
+}
+body > div.fotosindex > article  > h3{
+    padding: 1.6em;
+    margin-bottom: 0;
+}
 
 /*BUSCAR*/
 input#nombrebuscar{
@@ -392,6 +392,7 @@ fieldset.comentsolo > legend{
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 fieldset.comentsolo > legend > p.autorcoment{
@@ -404,6 +405,7 @@ fieldset.comentsolo > legend > img{
     border-radius: 50%;
     width: 2em;
     height: fit-content;
+    margin-right: .5em;
 }
 
 fieldset.publi > article > h4 > a{
@@ -486,13 +488,13 @@ fieldset.acercade{
 }
 
 /*Media Query*/
-@media only screen and (max-width: 1551px) {
-    body > section.fotosindex > article > div.imagen > a > img{
+@media only screen and (max-width: 1569px) {
+    body > div.fotosindex > article > div.imagen > a > img{
         margin-top: 1.5em;
         width: 15em;
         height: 11em;
     }
-    body > section.fotosindex > article{
+    body > div.fotosindex > article{
         width:100%;
         vertical-align: top;
         display: inline-block;
@@ -570,12 +572,12 @@ fieldset.acercade{
         align-items: center;
         display: none;
     }
-    body > section.fotosindex {
+    body > div.fotosindex {
         margin-top: 2em;
         padding-left: 0em;
         padding-right:0em;
     }
-    body > section.fotosindex > article > div.imagen > a > img{
+    body > div.fotosindex > article > div.imagen > a > img{
         margin-top: 1.5em;
         margin-left: 1em;
         margin-right: 1em;
@@ -592,16 +594,16 @@ fieldset.acercade{
     }
 }
 @media only screen and (max-width: 315px) { 
-    body > section.fotosindex {
+    body > div.fotosindex {
         margin-top: 2em;
         padding-left: 0em;
         padding-right:0em;
     }
-    body > section.fotosindex > article{
+    body > div.fotosindex > article{
         width: 15em;
         padding-left: 0;
     }
-    body > section.fotosindex > article > div.imagen > a > img{
+    body > div.fotosindex > article > div.imagen > a > img{
         margin-top: 1.5em;
         margin-left: 1em;
         margin-right: 1em;
@@ -616,12 +618,4 @@ fieldset.acercade{
     form#formulario > fieldset{
         margin-top: 2em;   
     }
-}
-/* Tooltip*/
-.tooltip {
-    position: relative; 
-    cursor: help;
-}
-.tooltip:hover::before {
-    opacity: 1;
 }

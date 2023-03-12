@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
         <!-- ponemos antes el de fontello para que no machaque a nuestro css principal -->
-        <link rel="stylesheet" href="fontello/css/fontello.css"/>
-        <link href="style.css" rel="stylesheet"/> 
+        <link rel="stylesheet" href="fontello/css/fontello.css">
+        <link href="style.css" rel="stylesheet"> 
         <!--<link rel="icon" href="log-img.png"> -->
         <!--<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet"> -->
         <link rel="icon" href="imagenes/logo.png"> 
@@ -18,7 +20,7 @@
                 <!-- esto es para el menu hamborguesa-->
                 <input type="checkbox" id="menu-checked">
                 <label id="menu" for="menu-checked">
-                    <span id="abrir">&#9776</span>
+                    <span id="abrir">&#9776;</span>
                     <span id="cerrar">X</span>
                 </label> 
                 <nav>
@@ -43,9 +45,9 @@
             <fieldset>
                 <legend>Añade una publicación</legend>
                     <ul>
-                        <li><p><span class="icon-right-open"></span><label>Título</p><input type="text" class="campodestacado" id="titulo" name="titulo" maxlength="200" minlength="1" placeholder="Ingrese un titulo" required></label><br></li>
-                        <li><p><span class="icon-doc-text-inv"></span><label>Texto</p><input type="text" class="campodestacado" id="texto" name="texto" minlength="1" placeholder="Ingrese una descripción" required></label><br></li>
-                        <li><p><span class="icon-location"></span><label>Ubicación</p><input list="browsers" class="campodestacado" id="ubi" name="ubi" maxlength="100" placeholder="Seleccione ubicación" required></label><br>
+                        <li><p><span class="icon-right-open"></span>Título</p><label><input type="text" class="campodestacado" id="titulo" name="titulo" maxlength="200" minlength="1" placeholder="Ingrese un titulo" required></label><br></li>
+                        <li><p><span class="icon-doc-text-inv"></span>Texto</p><label><input type="text" class="campodestacado" id="texto" name="texto" minlength="1" placeholder="Ingrese una descripción" required></label><br></li>
+                        <li><p><span class="icon-location"></span>Ubicación</p><label><input list="browsers" class="campodestacado" id="ubi" name="ubi" maxlength="100" placeholder="Seleccione ubicación" required></label><br>
                         <datalist id="browsers">
                             <option value="Murcia">
                             <option value="Cartagena">
@@ -55,14 +57,13 @@
                         <li><p><span class="icon-picture"></span>Foto</p><label for="foto" class="subir">
                             <i class="idk"></i>Subir archivo
                         </label>
-                            <input type="file" id="foto" value="" accept="image/*" style='display: none;'><br>
-                            </label> 
+                            <input type="file" id="foto" accept="image/*" style='display: none;'><br>
                             <input class="boton" type="reset" value="Borrar">
                             <div class="image-upload">
                                 <label for="file-input">
                                     <img src="imagenes/nofoto.png" alt ="defecto" width="70" > 
                                 </label>
-                                    <input id="file-input" name="foto" type="file" accept="image/*" style='display: none;'/>
+                                    <input id="file-input" name="foto" type="file" accept="image/*" style='display: none;'>
                             </div></li>
                     </ul>
                     <input class="boton" type="submit"  value="Enviar" >
