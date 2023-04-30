@@ -12,7 +12,7 @@
         <script src="verifica.js"></script>
         <link href="style.css" rel="stylesheet">
     </head>
-    <body onload="mostrarFotos();">
+    <body onload="mostrarFotos(1, 0, 5);">
         <header>
             <!-- HACEMOS EL MENÚ CON UNA LISTA Y MAS TARDE LO EDITAREMOS CON CSS -->
             <div class="navegacion">
@@ -47,17 +47,13 @@
                 <!-- aquí se agregarán las publicaciones -->
             </ul>
         </div>
-        <div class="barrapags">
-            <nav>
-                <ul>
-                    <li><a class="primera" href=".html"><span class=""></span>Primera página</a></li>
-                    <li><a href=".html"><span class=""></span>Página siguiente</a></li>
-                    <li><a href=".html"><span class=""></span>Página anterior</a></li>
-                    <li><a href=".html"><span class=""></span>Última página</a></li>
-                </ul>   
-                <h4>Página 1</h4>
-            </nav> 
-        </div>     
+        <div id="pagination">
+            <button id="first">Primera página</button>
+            <button id="previous">Página anterior</button>
+            <span id="current"></span>
+            <button id="next">Página siguiente</button>
+            <button id="last">Última página</button>
+        </div>  
         <footer>
             <p>&copy; Celia Gómez, Francisco José Delicado - 2023 </p>
             <a href="acerca.html">Acerca de</a>

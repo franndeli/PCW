@@ -3,17 +3,16 @@
     <head>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
-        <!-- ponemos antes el de fontello para que no machaque a nuestro css principal -->
         <link rel="stylesheet" href="fontello/css/fontello.css">
         <link href="style.css" rel="stylesheet"> 
-        <!--<link rel="icon" href="log-img.png"> -->
-        <!--<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet"> -->
         <link rel="icon" href="imagenes/logo.png"> 
+        <script src="nueva.js"></script>
+        <script src="verifica.js"></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>PCW</title>
     </head>
-    <body>
+    <body onload="pedirZonas(); usuario();">
         <header>
             <!-- HACEMOS EL MENÚ CON UNA LISTA Y MAS TARDE LO EDITAREMOS CON CSS -->
             <div class="navegacion">
@@ -30,49 +29,71 @@
                             <h1>Vecinos Conectados</h1>
                             <h2>Al día con tu comunidad</h2>
                         </li>
-                        <li class="cab2"><a href="index.html" class="icon-home"><span> inicio</span></a></li>
-                        <li class="cab2"><a href="buscar.html" class="icon-search"><span> buscar</span></a></li>
-                        <li class="cab2"><a href="nueva.html" class="icon-plus"><span> nueva</span></a></li>
-                        <li class="cab2"><a href="login.html" class="icon-user"><span> login</span></a></li>
-                        <li class="cab2"><a href="registro.html" class="icon-user-add"><span> registro</span></a></li>
-                        <li class="cab2"><a href="index.html" class="icon-user-delete"><span> logout</span></a></li>
+                       <!-------------------------------------------->
+                       <li class="cab2"><a href="index.html" id="nav_inicio" class="icon-home"><span> inicio</span></a></li>
+                       <li class="cab2"><a href="buscar.html" id="nav_buscar" class="icon-search"><span> buscar</span></a></li>
+                       <li class="cab2"><a href="nueva.html" id="nav_nueva" class="icon-plus"><span> nueva</span></a></li>
+                       <li class="cab2"><a href="login.html" id="nav_login" class="icon-user"><span> login</span></a></li>
+                       <li class="cab2"><a href="registro.html" id="nav_registro" class="icon-user-add"><span> registro</span></a></li>
+                       <li class="cab2"><a href="#" id="nav_logout" onclick="logout()" class="icon-user-delete"><span> logout</span></a></li>
+                       <!-------------------------------------------->
                     </ul>   
                 </nav>            
             </div>
         </header>
         
-        <form id="formulario" action="index.html" method="post">
+        <form id="formulario" onsubmit="return crearPublicacion(event);">
             <fieldset>
                 <legend>Añade una publicación</legend>
                     <ul>
                         <li><p><span class="icon-right-open"></span>Título</p><label><input type="text" class="campodestacado" id="titulo" name="titulo" maxlength="200" minlength="1" placeholder="Ingrese un titulo" required></label><br></li>
                         <li><p><span class="icon-doc-text-inv"></span>Texto</p><label><input type="text" class="campodestacado" id="texto" name="texto" minlength="1" placeholder="Ingrese una descripción" required></label><br></li>
-                        <li><p><span class="icon-location"></span>Ubicación</p><label><input list="browsers" class="campodestacado" id="ubi" name="ubi" maxlength="100" placeholder="Seleccione ubicación" required></label><br>
-                        <datalist id="browsers">
-                            <option value="Murcia">
-                            <option value="Cartagena">
-                            <option value="Jumilla">
-                            <option value="Caravaca">
+                        <li><p><span class="icon-location"></span>Ubicación</p>
+                            <label><input type="text" list="zonas" class="campodestacado" id="zona" name="zona" maxlength="100" placeholder="Seleccione ubicación" required></label><br>
+                        <datalist id="zonas">
                         </datalist></li>
-                        <li><p><span class="icon-picture"></span>Foto</p><label for="foto" class="subir">
-                            <i class="idk"></i>Subir archivo
-                        </label>
-                            <input type="file" id="foto" accept="image/*" style='display: none;'><br>
-                            <input class="boton" type="reset" value="Borrar">
-                            <div class="image-upload">
-                                <label for="file-input">
-                                    <img src="imagenes/nofoto.png" alt ="defecto" width="70" > 
-                                </label>
-                                    <input id="file-input" name="foto" type="file" accept="image/*" style='display: none;'>
-                            </div></li>
+                        <li>
+                            <!--<section id="secFoto">
+                                <div>
+                                    <input type="file" id="inputFoto" name="fotos[]" accept="image/*" onchange="fotosPublicacion(this);">
+                                    <img src="imagenes/nofoto.png" width="250" height="250" alt="noFoto" onclick="this.parentNode.querySelector('input[type=file]').click();">
+                                    <textarea id="descripcion[]" name="descripciones[]"></textarea>
+                                    <button onclick="this.parentNode.parentNode.querySelector('input[type=file]').click();"><span class="icon-camera"></button>
+                                    <button onclick="this.parentNode.parentNode.remove();">Eliminar</button>
+                                </div>
+                            </section>-->
+                            
+                            
+                            <input type="button" onclick="abrirFicha()" value="Añadir imagen">
+                            <div id="fichaFoto" style="display:none">
+                                <br><img id="imgFoto" src="imagenes/nofoto.png" width="150" height="150" onclick="document.querySelector('#foto').click();">
+                                    <textarea id="descripcion[]" name="descripciones[]"></textarea>
+                                    <input type="file" name="fotos[]" id="foto" accept="image/*" onchange="fotosPublicacion(this);">
+                                    <input type="reset" value="Borrar" id="borrar" onclick="restaurarFoto();">
+                              </div>
+                        </li>
+                        <li><div id="error"></div></li>
                     </ul>
                     <input class="boton" type="submit"  value="Enviar" >
                     <input class="boton" type="reset" value="Borrar">
             </fieldset>
         </form>
+        <dialog id="faltaFoto">
+            <form method="dialog">
+                <label>Se requiere introducir una foto.</label>
+                <button value="cerrar"><span class="icon-cancel"></span></button>
+            </form>
+        </dialog>
+        <dialog id="lugarGuardado">
+            <form method="dialog">
+                <label>Se ha guardado correctamente el lugar.</label>
+                <button value="cerrar"><span class="icon-cancel"></span></button>
+            </form>
+        </dialog>
         
         <footer>
             <p>&copy; Celia Gómez, Francisco José Delicado - 2023 </p>
             <a href="acerca.html">Acerca de</a>
         </footer>
+        <script src="verifica.js"></script>
     </body>

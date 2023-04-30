@@ -321,6 +321,52 @@ body > div.fotosindex > ul#publi > li:hover {
     transition: transform .2s;
     transform:scale(1.1);
 }
+/*
+body > h2{
+    text-align: center;
+    margin-top: 2em;
+}
+body > div.fotosindex > ul#publi{
+    width: 33%;
+    vertical-align: top;
+    display: inline-block;
+    border: .1em solid var(--amarillo-oscuro);
+    background-color: var(--blanco);
+    margin-top: 1em;
+}
+body > div.fotosindex {
+    margin-top: 2em; 
+    padding-left: 5em;
+    padding-right: 5em;
+}
+body > div.fotosindex > ul#publi > a {
+    width: 12em;
+    height: 10em;
+    display: flex;
+}
+body > div.fotosindex > ul#publi:hover {
+    transition: transform .2s;
+    transform:scale(1.1);
+}
+body > div.fotosindex > ul#publi {
+    overflow: hidden;
+}
+body > div.fotosindex > ul#publi > p{
+    text-align: center;
+    margin-top: 0;
+}
+body > div.fotosindex > ul#publi > div.imagen{
+    text-align: center;
+}
+body > div.fotosindex > ul#publi > div.imagen > a > img{
+    margin-top: 1.5em;
+    width: 20em;
+    height: 15em;
+}
+body > div.fotosindex > ul#publi  > h3{
+    padding: 1.6em;
+    margin-bottom: 0;
+}
 
 /*BUSCAR*/
 input#nombrebuscar{

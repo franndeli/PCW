@@ -6,6 +6,7 @@
         <!-- ponemos antes el de fontello para que no machaque a nuestro css principal -->
         <link rel="stylesheet" href="fontello/css/fontello.css">
         <link href="style.css" rel="stylesheet"> 
+        <script src="registro.js"></script>
         <!--<link rel="icon" href="log-img.png"> -->
         <link rel="icon" href="imagenes/logo.png"> 
         <meta charset="UTF-8">
@@ -40,33 +41,37 @@
             </div>
         </header>
         
-        <form id="formulario" action="index.html" method="post">
+        <form id="formulario" onsubmit="return hacerRegistro(this);">
             <fieldset>
                 <legend>Registrate</legend>
                     <ul>
-                        <li><p><span class="icon-right-open"></span>Nombre</p><label><input type="text" class="campodestacado" id="nombre" name="nombre" autofocus="autofocus" placeholder="Ingrese un nombre" required></label><br></li>
-                        <li><p><span class="icon-user"></span>Login</p><label><input type="text" class="campodestacado" id="login" name="login" minlength="4" maxlength="20" pattern="^[a-zA-Z][A-Za-z0-9]*$" placeholder="Ingrese un nombre de usuario" required></label><br></li>
-                        <li><p><span class="icon-mail-alt"></span>Email</p><label><input type="text" class="campodestacado"  placeholder="Ingrese su email" required></label><br></li>
-                        <li><p><span class="icon-key"></span>Contraseña</p><label><input type="password" class="campodestacado" id="password" name="password" minlength="4" maxlength="20" pattern="^[a-zA-Z0-9_\-\.]+$" placeholder="Ingrese una contraseña" required ></label><br></li>
-                        <li><p><span class="icon-key"></span>Repetir contraseña</p><label><input type="password" class="campodestacado" id="password2" name="password2" minlength="4" maxlength="20" placeholder="Repita su contraseña"></label><br></li>
-                        <li><p><span class="icon-picture"></span>Foto</p><label for="foto" class="subir">
-                            <i class="idk"></i>Subir archivo
-                        </label>
-                            <input type="file" id="foto" accept="image/*" style='display: none;'><br>
-                            <input class="boton" type="reset" value="Borrar">
-                            <label for="file-input">
-                                <img src="imagenes/vacia.png" alt ="defecto" width="70" > 
-                            </label>
-                                <input id="file-input" name="foto" type="file" accept="image/*" style='display: none;'>
+                        <li><p><span class="icon-right-open"></span>Nombre</p><label for="nombre"><input type="text" class="campodestacado" id="nombre" name="nombre" autofocus="autofocus" placeholder="Ingrese un nombre" required></label><br></li>
+                        <li><p><span class="icon-user"></span>Login</p><label for="login"><input type="text" class="campodestacado" id="login" name="login" minlength="4" maxlength="20" pattern="^[a-zA-Z][A-Za-z0-9]*$" placeholder="Ingrese un nombre de usuario" required></label><br></li>
+                        <li><p><span class="icon-mail-alt"></span>Email</p><label for="email"><input type="text" class="campodestacado" id="email" name="email" placeholder="Ingrese su email" required></label><br></li>
+                        <li><p><span class="icon-key"></span>Contraseña</p><label for="pwd"><input type="password" class="campodestacado" id="pwd" name="pwd" minlength="4" maxlength="20" pattern="^[a-zA-Z0-9_\-\.]+$" placeholder="Ingrese una contraseña" required ></label><br></li>
+                        <li><p><span class="icon-key"></span>Repetir contraseña</p><label for="pwd2"><input type="password" class="campodestacado" id="pwd2" name="pwd2" minlength="4" maxlength="20" placeholder="Repita su contraseña"></label><br></li>
+                        <li><div id="error"></div></li>
+                        <li><div>
+                            <label for="foto"><span class="icon-picture"></label>
+                            <input type="file" id="foto" name="foto" accept="image/*" onchange="mostrarFoto(this);">
+                            <img id="imgFoto" src="imagenes/vacia.png" width="150" height="180" onclick="document.querySelector('#foto').click();">
+                        </div>
+                        <div><input type="reset" value="Borrar" id="borrar" onclick="restaurarFoto();"></div>
                         </li>
                     </ul>
                     <input class="boton" type="submit"  value="Enviar" >
                     <!-- <input type="reset" value="Borrar"> -->
             </fieldset>
         </form>
-        
+        <dialog id="registroCorrecto">
+            <form method="dialog">
+                <label>Se ha completado el login con éxito.</label>
+                <input type="submit" value="X" >
+            </form>
+        </dialog>
         <footer>
             <p>&copy; Celia Gómez, Francisco José Delicado - 2023 </p>
             <a href="acerca.html">Acerca de</a>
         </footer>
+        <script src="verifica.js"></script>
     </body>
