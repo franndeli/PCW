@@ -15,7 +15,6 @@
         <script>
             function cargarBusqueda(){
                 buscarPorUrl(); 
-                mostrarFotos();
             }
         </script>
         <header>
@@ -87,6 +86,13 @@
                 <!-- aquí se agregarán las publicaciones -->
             </ul>
         </div>
+        <div id="pagination">
+            <button id="first">Primera página</button>
+            <button id="previous">Página anterior</button>
+            <span id="current"></span>
+            <button id="next">Página siguiente</button>
+            <button id="last">Última página</button>
+        </div>  
         <footer>
             <p>&copy; Celia Gómez, Francisco José Delicado - 2023 </p>
             <a href="acerca.html">Acerca de</a>
