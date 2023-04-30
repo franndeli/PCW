@@ -28,113 +28,61 @@
                         <h1>Vecinos Conectados</h1>
                         <h2>Al día con tu comunidad</h2>
                     </li>
-                    <li class="cab2"><a href="index.html" class="icon-home"><span> inicio</span></a></li>
-                    <li class="cab2"><a href="buscar.html" class="icon-search"><span> buscar</span></a></li>
-                    <li class="cab2"><a href="nueva.html" class="icon-plus"><span> nueva</span></a></li>
-                    <li class="cab2"><a href="login.html" class="icon-user"><span> login</span></a></li>
-                    <li class="cab2"><a href="registro.html" class="icon-user-add"><span> registro</span></a></li>
-                    <li class="cab2"><a href="index.html" class="icon-user-delete"><span> logout</span></a></li>
+                    <!-------------------------------------------->
+                    <li class="cab2"><a href="index.html" id="nav_inicio" class="icon-home"><span> inicio</span></a></li>
+                    <li class="cab2"><a href="buscar.html" id="nav_buscar" class="icon-search"><span> buscar</span></a></li>
+                    <li class="cab2"><a href="nueva.html" id="nav_nueva" class="icon-plus"><span> nueva</span></a></li>
+                    <li class="cab2"><a href="login.html" id="nav_login" class="icon-user"><span> login</span></a></li>
+                    <li class="cab2"><a href="registro.html" id="nav_registro" class="icon-user-add"><span> registro</span></a></li>
+                    <li class="cab2"><a href="#" id="nav_logout" onclick="logout()" class="icon-user-delete"><span> logout</span></a></li>
+                    <!-------------------------------------------->
                 </ul>   
             </nav>            
         </div>
     </header>
 
-    <fieldset class="publi">
+    <fieldset class="publi" id="publicacion-container">
         <article>
             <div class="titulo">
-                <h2>Incendio en la Calle Santa Fe</h2>
-                <p><span class="icon-location"></span><a href="buscar.html">Alicante</a></p>
+                <h2 id="publication-title"></h2>
+                <p><span class="icon-location"></span><a href="buscar.html" id="publication-location"></a></p>
             </div>
-            <p class="fechacoment"> Javier Carrasco / 06.02.23 - 14:50H</p>
-            <div class="textopubli">
-                <p>En la madrugada de ayer, se produjo un incendio en un edificio ubicado en la calle Santa Fe.
-                El siniestro se inició en uno de los apartamentos del tercer piso, y se propagó rápidamente debido a la cantidad de objetos inflamables presentes en el lugar. El humo y las llamas se extendieron por todo el edificio, causando daños considerables en la estructura y dejando a varios vecinos sin hogar.
-                </p> 
-                <p>
-                    Afortunadamente, los bomberos llegaron rápidamente al lugar y pudieron controlar el fuego después de varias horas de arduo trabajo. Se reportaron algunos heridos leves debido al humo, pero no hubo víctimas fatales.
-                </p>
-                <p>
-                    Este tipo de situaciones son un recordatorio de la importancia de contar con medidas de prevención y seguridad en nuestros hogares. Es importante tener en cuenta la necesidad de revisar las instalaciones eléctricas, evitar el almacenamiento de objetos inflamables en zonas de alto riesgo y contar con extintores en caso de emergencia.
-                </p>
-                <p>    
-                    También es vital tener un plan de evacuación claro y conciso en caso de que ocurra una emergencia. Es recomendable que cada vecino tenga conocimiento de las rutas de escape y puntos de reunión en caso de un incendio u otra situación de emergencia.
-                </p>
-                <p>   
-                    En momentos como estos, es importante mantener la calma y colaborar con las autoridades para evitar daños mayores. Esperamos que los vecinos afectados por el incendio puedan recuperarse pronto y encontrar una solución a sus necesidades. Sigamos trabajando juntos para mantener nuestra comunidad segura y unida.
-                </p>
+            <p class="fechacoment" id="publication-author-date"></p>
+            <div class="textopubli" id="publication-text">
             </div>
-                <img class="imgpubli" src="imagenes/foto1.jpg" alt="incendio">
-            <br>
+            <div id="photos-section">
+                <div id="photos-container"></div>
+            </div>
+            <button id="toggle-photos-btn">Ocultar fotos</button>           
         </article>
             <div class="megusta">
-                <p class="coment"><a href="#Comentarios" class="numcomentarios">2 cometario(s)</a></p>
-                <span class="icon-thumbs-up"></span><p>5</p> 
-                <span class="icon-thumbs-down"></span><p>0</p>
+                <p class="coment"><a href="#comentarios" class="numcomentarios" id="publication-comments-count">2 cometario(s)</a></p>
+                <span id="btn-megusta" class="icon-thumbs-up"></span><p id="publication-megusta"></p>
+                <span id="btn-nomegusta" class="icon-thumbs-down"></span><p id="publication-nomegusta"></p>
             </div>
+        
     </fieldset>
 
     <br>
 
-    <fieldset class="publi">
+    <fieldset class="publi" id="comentarios">
         <h2>Comentarios</h2>
-            <fieldset class="comentsolo">
-                <legend>
-                    <img src="imagenes/imgperfil1.png" alt="fotoperfil1">
-                    Pepa Martínez
-                </legend>
-                <div>
-                    <div class="textopubli">
-                        <p>¡Hola a todos! Como vecina afectada por el incendio en la calle Santa Fe, quiero expresar mi agradecimiento a todos los que nos han brindado su apoyo en estos momentos difíciles. Aunque ha sido una experiencia muy traumática, estamos agradecidos de que no haya habido víctimas mortales.</p>
-                        <p>Agradezco la rápida acción de los bomberos, quienes trabajaron arduamente para controlar el fuego y proteger a todos los residentes del edificio. También quiero agradecer a nuestros vecinos por su solidaridad y ayuda en medio de esta situación.</p>
-
-                        <p>Este incendio nos ha recordado la importancia de tener medidas de seguridad en nuestros hogares. En mi caso, estoy revisando mis instalaciones eléctricas y tomando medidas para reducir el riesgo de incendios. También estoy trabajando con mis vecinos para establecer un plan de evacuación claro y conciso en caso de emergencia.</p>
-                            
-                        <p>Espero que este incidente sirva como un llamado de atención para todos los vecinos de nuestra comunidad y nos impulse a trabajar juntos para mantener nuestra comunidad segura y protegida. Gracias de nuevo a todos los que nos han apoyado en estos momentos difíciles.</p>
-                        <p class="fechacoment"><span class="icon-calendar"></span>26 de Febreo de 2023, 12:36H</p>
-                    </div>
-                </div>
-            </fieldset>
-
-            <fieldset class="comentsolo">
-                <legend>
-                    <img src="imagenes/imgperfil1.png" alt="fotoperfil1">
-                    Francisco González
-                </legend>
-                <div>
-                    <div class="textopubli">
-                        <p>Querida comunidad,</p>
-                        <p>Estoy profundamente triste al enterarme del incendio que afectó a la comunidad de la calle Santa Fe. Aunque no vivo allí, conozco a una persona que ha sido afectada por este desastre y sé lo difícil que puede ser para ella.</p>
-
-                        <p>Este incidente nos recuerda la importancia de estar preparados para emergencias y tener planes de evacuación claros. Debemos trabajar juntos como comunidad para protegernos y asegurarnos de que nuestros hogares sean seguros y estén equipados con las medidas de seguridad necesarias.
-                            
-                            Quiero enviar mis pensamientos y mis mejores deseos a las personas afectadas por el incendio, y espero que puedan encontrar la fuerza y el apoyo necesarios para superar este momento difícil. También quiero agradecer a los bomberos y a los servicios de emergencia por su rápido y valiente trabajo en controlar el fuego y proteger a los residentes.</p>
-                            
-                        <p>Sigamos apoyándonos mutuamente y trabajando juntos para hacer de nuestra comunidad un lugar más seguro y unido.</p>
-                    </div>
-                    <p class="fechacoment"><span class="icon-calendar"></span>3 de Marzo de 2023, 17:29H</p>
-                </div>
-            </fieldset>
+        <div id="comentarios-container">
+            <!-- Los comentarios serán añadidos aquí por publicacion.js -->
+        </div>
     </fieldset>
 
     <br><br>
 
-    <div class="cajatext">
-        <textarea id="Comment" cols="50" maxlength="250" minlength="1" name="WriteComment" placeholder="Deja aquí tu comentario"></textarea>
-        <p><input class="botonenviar" type="submit"  value="Enviar"></p><p><input class="botonenviar" type="submit"  value="Limpiar" onclick="document.getElementById('Comment').value = ''"></p>
-    </div>
+    <div id="formulario-container"></div>
 
     <br><br><br>
-
-    <fieldset class="publi">
-        <article>
-            <h4>Tienes que estar logueado para dejar un comentario. <a href="login.html">Inicia sesión o Regístrate</a></h4>
-        </article>
-    </fieldset>
-    
 
     <footer>
         <p>&copy; Celia Gómez, Francisco José Delicado - 2023 </p>
         <a href="acerca.html">Acerca de</a>
     </footer>
+    <script src="publicacion.js"></script>
+    <script src="verifica.js"></script>
 </body>
 </html>

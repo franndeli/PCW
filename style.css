@@ -279,50 +279,47 @@ form#formulario > fieldset > ul > li > label > input#foto{
 }
 
 /*INDEX*/
-body > h2{
-    text-align: center;
-    margin-top: 2em;
+body > div.fotosindex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    
 }
-body > div.fotosindex > article{
-    width: 33%;
+body > div.fotosindex > ul#publi {
+    list-style: none;
+}
+body > div.fotosindex > ul#publi > li{
+    width: 30%;
     vertical-align: top;
     display: inline-block;
     border: .1em solid var(--amarillo-oscuro);
     background-color: var(--blanco);
     margin-top: 1em;
+    margin-left: .5em;
 }
-body > div.fotosindex {
-    margin-top: 2em; 
-    padding-left: 5em;
-    padding-right: 5em;
+body > div.fotosindex > ul#publi > li > p {
+    margin-left: 2em;
 }
-body > div.fotosindex > article > a {
-    width: 12em;
-    height: 10em;
-    display: flex;
+body > h2{
+    text-align: center;
 }
-body > div.fotosindex > article:hover {
+body > div.fotosindex > ul#publi > li > a > h3 {
+    margin-left: 2em;
+    margin-right: 2em;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+body > div.fotosindex > ul#publi > li > a > div.imagen{
+    margin-top: 2em;
+    text-align: center;
+}
+body > div.fotosindex > ul#publi > li:hover {
     transition: transform .2s;
     transform:scale(1.1);
-}
-body > div.fotosindex > article {
-    overflow: hidden;
-}
-body > div.fotosindex > article > p{
-    text-align: center;
-    margin-top: 0;
-}
-body > div.fotosindex > article > div.imagen{
-    text-align: center;
-}
-body > div.fotosindex > article > div.imagen > a > img{
-    margin-top: 1.5em;
-    width: 20em;
-    height: 15em;
-}
-body > div.fotosindex > article  > h3{
-    padding: 1.6em;
-    margin-bottom: 0;
 }
 
 /*BUSCAR*/
@@ -395,7 +392,7 @@ fieldset.comentsolo > legend{
     
 }
 
-fieldset.comentsolo > legend > p.autorcoment{
+fieldset.comentsolo > legend > p.nombrecoment{
     margin-left: .5em;
     margin-right: .5em;
 }
