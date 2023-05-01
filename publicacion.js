@@ -40,14 +40,17 @@ function obtenerPublicacion() {
                 displayPublicationData(publication);
             } else {
                 console.error('Error al obtener los datos de la publicación:', data);
+                window.location.href = "index.html";
             }
         })
         .catch(error => {
             console.error('Error al obtener los datos de la publicación:', error);
+            window.location.href = "index.html";
         });
     
-        return publicationId;
+    return publicationId;
 }
+
 
 function displayPublicationData(publication) {
     console.log('displayPublicationData called with:', publication);
@@ -55,19 +58,19 @@ function displayPublicationData(publication) {
     const titleElement = document.getElementById("publication-title");
     const locationElement = document.getElementById("publication-location");
     const authorDateElement = document.getElementById("publication-author-date");
+    const authorPhoto = document.getElementById("publication-author-photo");
     const textElement = document.getElementById("publication-text");
     const meGustaElement = document.getElementById("publication-megusta");
     const nomeGustaElement = document.getElementById("publication-nomegusta");
-
-    const btnMeGusta = document.getElementById("btn-megusta");
-    const btnNomeGusta = document.getElementById("btn-nomegusta");
 
     locationElement.href = `buscar.html?nombreZona=${encodeURIComponent(publication.nombreZona)}`;
 
     titleElement.innerText = publication.titulo || "";
     locationElement.innerText = publication.nombreZona || "";
     authorDateElement.innerText = publication.autor + ', ' + formatDate(publication.fechaCreacion) || "";
-
+    authorPhoto.innerHTML = `
+    <img src="fotos/usuarios/${publication.fotoAutor}" alt="Foto de ${publication.fotoAutor}"></img>
+    `
     textElement.innerHTML = publication.texto;
     meGustaElement.innerHTML = publication.nMeGusta;
     nomeGustaElement.innerHTML = publication.nNoMeGusta;
@@ -146,7 +149,7 @@ function obtenerComentarios(idPublicacion) {
             }
         })
         .then(comentarios => {
-            console.log('Comentarios recibidos:', comentarios); // Añade esta línea para ver qué devuelve el servidor
+            console.log('Comentarios recibidos:', comentarios);
             mostrarComentarios(comentarios.FILAS);
             actualizarContadorComentarios(comentarios.FILAS);
         })
@@ -229,7 +232,6 @@ function crearComentario(frm) {
 
             dialogo.showModal();
         } else {
-            // Mostrar mensaje de error
             console.error("Error al guardar el comentario", res);
         }
     }
@@ -243,11 +245,6 @@ function crearComentario(frm) {
 }
 
 function votePublication(idPublication, voteType) {
-    if (!checkLoginStatus()) {
-        alert("Debes iniciar sesión para votar.");
-        return;
-    }
-
     let xhr = new XMLHttpRequest();
     let url = `api/publicaciones/${idPublication}/${voteType}`;
     let user = JSON.parse(sessionStorage['datos']);
@@ -260,14 +257,13 @@ function votePublication(idPublication, voteType) {
         let res = xhr.response;
     
         if ((xhr.status === 200 || xhr.status === 201) && res.RESULTADO === "OK") {
-            // Actualiza la cantidad de votos en el DOM
             document.getElementById("publication-megusta").innerText = res.nMeGusta;
             document.getElementById("publication-nomegusta").innerText = res.nNoMeGusta;
     
             let btnMeGusta = document.getElementById("btn-megusta");
             let btnNoMeGusta = document.getElementById("btn-nomegusta");
     
-            // Habilita o deshabilita los botones según el voto del usuario
+            // Habilita o deshabilita los botones
             if (res.meGusta === 1) {
                 btnMeGusta.dataset.voted = "true";
                 btnNoMeGusta.dataset.voted = "false";
@@ -279,7 +275,6 @@ function votePublication(idPublication, voteType) {
                 btnNoMeGusta.dataset.voted = "false";
             }
         } else {
-            // Mostrar mensaje de error
             console.error("Error en la votación", res);
         }
     }
@@ -290,24 +285,6 @@ function votePublication(idPublication, voteType) {
     xhr.send();
 
     return false;
-}
-
-function mostrarMensajeModal(mensaje) {
-    const modalElement = document.createElement("div");
-    modalElement.classList.add("modal");
-    modalElement.innerHTML = `
-        <div class="modal-content">
-            <p>${mensaje}</p>
-            <button class="modal-close-btn">Cerrar</button>
-        </div>
-    `;
-
-    document.body.appendChild(modalElement);
-
-    const closeButton = modalElement.querySelector(".modal-close-btn");
-    closeButton.addEventListener("click", () => {
-        modalElement.remove();
-    });
 }
 
 function actualizarContadorComentarios(comentarios) {
@@ -335,7 +312,7 @@ function cerrarDialogo() {
 document.addEventListener('DOMContentLoaded', init);
 
 document.querySelector("#btn-megusta").addEventListener("click", () => {
-    let idPublication = publicacionId; // Reemplaza esto por el ID real de la publicación
+    let idPublication = publicacionId;
     let btnNoMeGusta = document.getElementById("btn-nomegusta");
 
     if (btnNoMeGusta.dataset.voted !== "true") {
@@ -344,7 +321,7 @@ document.querySelector("#btn-megusta").addEventListener("click", () => {
 });
 
 document.querySelector("#btn-nomegusta").addEventListener("click", () => {
-    let idPublication = publicacionId; // Reemplaza esto por el ID real de la publicación
+    let idPublication = publicacionId;
     let btnMeGusta = document.getElementById("btn-megusta");
 
     if (btnMeGusta.dataset.voted !== "true") {

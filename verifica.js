@@ -6,7 +6,7 @@ function checkLoginStatus() {
     const loggedIn = sessionStorage['datos'] !== undefined;
     const currentPage = window.location.pathname.split('/').pop();
   
-    // Modificar el menú de navegación según el estado de inicio de sesión
+    // Modificar el menú
     const loginLink = document.querySelector('#nav_login');
     const registerLink = document.querySelector('#nav_registro');
     const newPlaceLink = document.querySelector('#nav_nueva');
@@ -19,7 +19,6 @@ function checkLoginStatus() {
             newPlaceLink.style.display = 'block';
             logoutLink.style.display = 'block';
 
-            // Mostrar el nombre de usuario junto al enlace de logout
             const datos = JSON.parse(sessionStorage['datos']);
             logoutLink.innerHTML = `<span> logout (${datos.LOGIN})</span>`;
         } else {
@@ -30,7 +29,6 @@ function checkLoginStatus() {
         }
     }
 
-    // Restringir el acceso a ciertas páginas según el estado de inicio de sesión
     if (currentPage === 'publicacion.html') {
         if (loggedIn) {
             cargarFormularioComentarios();

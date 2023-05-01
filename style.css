@@ -18,6 +18,7 @@ h4{
     text-align: center;
 }
 h3{
+    text-decoration: none;
     text-align: center;
     overflow: hidden;
     white-space: nowrap;
@@ -28,28 +29,6 @@ h3 a{
     text-decoration: none;
     color:var(--negro);
 }
-
-/*cabecera imagen, titulo y sub*/
-/*header {
-    margin-top: 2em;
-    text-align: center;
-}
-header > div.encima {
-    display: inline-block;
-    margin-left: 3em;
-}
-header > div.encima > h1 {
-    margin-top: 0em;
-}
-header > a > img {
-    width: 9em;
-    height: 9em;
-}*/
-/*barra de navegacion*/
-/*.navegacion > nav >  ul > li.logout{
-    float: right;
-    border-left: 1px solid var(--blanco);
-}*/
 
 .navegacion > nav> ul > li.cab {
     float: left;
@@ -335,7 +314,7 @@ body > div.fotosindex > ul#publi > li:hover {
 
 /*Barra navegacion entre publicaciones*/
 #pagination {
-  display: flex;
+  display: flex !important;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
@@ -495,6 +474,14 @@ a.numcomentarios:hover{
     color: var(--negro);
 }
 
+.prueba > img{
+    margin-left: .5em;
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+    margin-right: .5em;
+}
+
 /*FONTELLO*/
 div.megusta > span.icon-thumbs-up{
     font-size: 25px;
@@ -520,6 +507,15 @@ fieldset.acercade{
     margin: 2em;
     padding: 1em;
 }
+
+/*Mostrar foto de perfil en las publicaciones*/
+.autor-foto {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 
 /*Media Query*/
 @media only screen and (max-width: 1569px) {

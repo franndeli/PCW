@@ -10,7 +10,7 @@ function mostrarResultados(publicaciones, totalPublicaciones, pagina) {
     publicaciones.forEach(function(e) {
         const fecha = new Date(e.fechaCreacion);
         const fechaString = `${('0' + fecha.getDate()).slice(-2)}-${('0' + (fecha.getMonth() + 1)).slice(-2)}-${fecha.getFullYear()} `;
-        html += `<li><a href="publicacion.html?id=${e.id}" title="${e.titulo}">
+        html += `<li><a style="text-decoration: none; color: black;" href="publicacion.html?id=${e.id}" title="${e.titulo}">
             <div class="imagen"><img src="fotos/pubs/${e.imagen}" width="280" height="210" alt="${e.titulo}"></div>
             <h3>${e.titulo}</h3></a>
             <p>${e.autor}</p>
@@ -34,7 +34,7 @@ function buscar(pagina = 0) {
     let texto = document.getElementById("nombrebuscar").value;
     let fechaDesde = document.getElementById("start").value;
     let fechaHasta = document.getElementById("end").value;
-    let zona = document.getElementById("nivel").value;
+    let zona = document.getElementById("zona").value;
     let registrosPorPagina = 6;
 
     let url = "api/publicaciones?";
@@ -79,7 +79,7 @@ function buscarPorUrl() {
     const urlParams = new URLSearchParams(window.location.search);
     const nombreZona = urlParams.get("nombreZona");
     if (nombreZona) {
-        document.getElementById("nivel").value = nombreZona;
+        document.getElementById("zona").value = nombreZona;
         buscar();
     }
 }
@@ -103,6 +103,24 @@ function actualizarBotones(totalPublicaciones, paginaActual) {
     document.querySelector('#last').onclick = function() {
         buscar(totalPaginas - 1);
     };
+}
+
+function pedirZonas() {
+    let xhr = new XMLHttpRequest(),
+        url = 'api/zonas';
+
+    xhr.open('GET', url, true);
+    xhr.onload = function() {
+        let respuesta = JSON.parse(xhr.responseText),
+            html = '';
+        //console.log(respuesta);
+        respuesta.FILAS.forEach(function(e) {
+            //console.log(e);
+            html += `<option>${e.nombre}</option>`;
+        });
+        document.querySelector('#zonas').innerHTML = html;
+    };
+    xhr.send();
 }
 
 window.addEventListener('DOMContentLoaded', buscarPorUrl);

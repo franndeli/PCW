@@ -52,6 +52,9 @@ function hacerLogin(evt) {
           html += '<h3>Bienvenido ';
           html += res.NOMBRE;
           html += '</h3>';
+          html += '<h4>Ultimo acceso: ';
+          html += res.ULTIMO_ACCESO;
+          html += '</h4>';
           html += '<button onclick="cerrarDialogo(2);">Cerrar</button>';
 
           dialogo.innerHTML = html;

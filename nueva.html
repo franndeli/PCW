@@ -14,9 +14,7 @@
     </head>
     <body onload="pedirZonas(); usuario();">
         <header>
-            <!-- HACEMOS EL MENÚ CON UNA LISTA Y MAS TARDE LO EDITAREMOS CON CSS -->
             <div class="navegacion">
-                <!-- esto es para el menu hamborguesa-->
                 <input type="checkbox" id="menu-checked">
                 <label id="menu" for="menu-checked">
                     <span id="abrir">&#9776;</span>
@@ -29,14 +27,14 @@
                             <h1>Vecinos Conectados</h1>
                             <h2>Al día con tu comunidad</h2>
                         </li>
-                       <!-------------------------------------------->
+                       
                        <li class="cab2"><a href="index.html" id="nav_inicio" class="icon-home"><span> inicio</span></a></li>
                        <li class="cab2"><a href="buscar.html" id="nav_buscar" class="icon-search"><span> buscar</span></a></li>
                        <li class="cab2"><a href="nueva.html" id="nav_nueva" class="icon-plus"><span> nueva</span></a></li>
                        <li class="cab2"><a href="login.html" id="nav_login" class="icon-user"><span> login</span></a></li>
                        <li class="cab2"><a href="registro.html" id="nav_registro" class="icon-user-add"><span> registro</span></a></li>
                        <li class="cab2"><a href="#" id="nav_logout" onclick="logout()" class="icon-user-delete"><span> logout</span></a></li>
-                       <!-------------------------------------------->
+                       
                     </ul>   
                 </nav>            
             </div>
@@ -53,23 +51,12 @@
                         <datalist id="zonas">
                         </datalist></li>
                         <li>
-                            <!--<section id="secFoto">
-                                <div>
-                                    <input type="file" id="inputFoto" name="fotos[]" accept="image/*" onchange="fotosPublicacion(this);">
-                                    <img src="imagenes/nofoto.png" width="250" height="250" alt="noFoto" onclick="this.parentNode.querySelector('input[type=file]').click();">
-                                    <textarea id="descripcion[]" name="descripciones[]"></textarea>
-                                    <button onclick="this.parentNode.parentNode.querySelector('input[type=file]').click();"><span class="icon-camera"></button>
-                                    <button onclick="this.parentNode.parentNode.remove();">Eliminar</button>
-                                </div>
-                            </section>-->
-                            
-                            
                             <input type="button" onclick="abrirFicha()" value="Añadir imagen">
                             <div id="fichaFoto" style="display:none">
-                                <br><img id="imgFoto" src="imagenes/nofoto.png" width="150" height="150" onclick="document.querySelector('#foto').click();">
+                                <br><img id="imgFoto" src="imagenes/nofoto.png" alt="No foto" width="150" height="150" onclick="document.querySelector('#foto').click();">
                                     <textarea id="descripcion[]" name="descripciones[]"></textarea>
                                     <input type="file" name="fotos[]" id="foto" accept="image/*" onchange="fotosPublicacion(this);">
-                                    <input type="reset" value="Borrar" id="borrar" onclick="restaurarFoto();">
+                                    <input type="button" value="Borrar" id="borrar" onclick="restaurarFoto();">
                               </div>
                         </li>
                         <li><div id="error"></div></li>
@@ -78,16 +65,23 @@
                     <input class="boton" type="reset" value="Borrar">
             </fieldset>
         </form>
+        
         <dialog id="faltaFoto">
             <form method="dialog">
                 <label>Se requiere introducir una foto.</label>
-                <button value="cerrar"><span class="icon-cancel"></span></button>
+                <button value="cerrar">X</button>
+            </form>
+        </dialog>
+        <dialog id="fotoGrande">
+            <form method="dialog">
+                <label>La imagen es demasiado grande.</label>
+                <button value="cerrar">X</button>
             </form>
         </dialog>
         <dialog id="lugarGuardado">
             <form method="dialog">
                 <label>Se ha guardado correctamente el lugar.</label>
-                <button value="cerrar"><span class="icon-cancel"></span></button>
+                <button value="cerrar">X</button>
             </form>
         </dialog>
         

@@ -31,7 +31,9 @@ function pedirZonas() {
 function abrirFicha() {
     document.getElementById("fichaFoto").style.display = "block";
 }
+
 let hayFoto = false;
+
 function fotosPublicacion(foto){
     const maxSize = 300 * 1024;
     let fichero = foto.files[0];
@@ -39,18 +41,24 @@ function fotosPublicacion(foto){
     if(fichero && fichero.size <= maxSize){
         foto.parentNode.querySelector('img').src = URL.createObjectURL(fichero);
         hayFoto = true;
+    } else{
+        foto.value = '';
+        let incorrecto = document.querySelector('#fotoGrande');
+        
+        incorrecto.onclose = function(){
+        if(incorrecto.returnValue == 'cerrar')
+            console.log('ERROR: añadir foto');
+        }
+        incorrecto.showModal();
     }
 }
 
 function restaurarFoto(){
-    document.querySelector('#imgFoto').src = 'imagenes/nofoto.png'
+    document.querySelector('#imgFoto').src = 'imagenes/nofoto.png';
+    document.querySelector('#foto').value = '';
+    hayFoto = false;
 }
-/*
-function cerrarFormulario() {
-    var formulario = document.getElementById("fichaFoto");
-    formulario.innerHTML = "";
-}
-*/
+
 function crearPublicacion(evt){
     evt.preventDefault();
     if(!hayFoto){

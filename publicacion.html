@@ -28,14 +28,13 @@
                         <h1>Vecinos Conectados</h1>
                         <h2>Al día con tu comunidad</h2>
                     </li>
-                    <!-------------------------------------------->
+
                     <li class="cab2"><a href="index.html" id="nav_inicio" class="icon-home"><span> inicio</span></a></li>
                     <li class="cab2"><a href="buscar.html" id="nav_buscar" class="icon-search"><span> buscar</span></a></li>
                     <li class="cab2"><a href="nueva.html" id="nav_nueva" class="icon-plus"><span> nueva</span></a></li>
                     <li class="cab2"><a href="login.html" id="nav_login" class="icon-user"><span> login</span></a></li>
                     <li class="cab2"><a href="registro.html" id="nav_registro" class="icon-user-add"><span> registro</span></a></li>
                     <li class="cab2"><a href="#" id="nav_logout" onclick="logout()" class="icon-user-delete"><span> logout</span></a></li>
-                    <!-------------------------------------------->
                 </ul>   
             </nav>            
         </div>
@@ -44,9 +43,10 @@
     <fieldset class="publi" id="publicacion-container">
         <article>
             <div class="titulo">
-                <h2 id="publication-title"></h2>
+                <h2 id="publication-title">-</h2>
                 <p><span class="icon-location"></span><a href="buscar.html" id="publication-location"></a></p>
             </div>
+            <p class="prueba" id="publication-author-photo"></p>
             <p class="fechacoment" id="publication-author-date"></p>
             <div class="textopubli" id="publication-text">
             </div>
@@ -56,7 +56,7 @@
             <button id="toggle-photos-btn">Ocultar fotos</button>           
         </article>
             <div class="megusta">
-                <p class="coment"><a href="#comentarios" class="numcomentarios" id="publication-comments-count">2 cometario(s)</a></p>
+                <p class="coment"><a href="#comentarios" class="numcomentarios" id="publication-comments-count"></a></p>
                 <span id="btn-megusta" class="icon-thumbs-up"></span><p id="publication-megusta"></p>
                 <span id="btn-nomegusta" class="icon-thumbs-down"></span><p id="publication-nomegusta"></p>
             </div>
