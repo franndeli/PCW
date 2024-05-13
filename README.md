@@ -15,7 +15,7 @@ Este repositorio contiene los archivos de la segunda práctica de la asignatura 
 Para ejecutar este proyecto localmente, necesitas instalar XAMPP y seguir los siguientes pasos:
 
 1. Clona este repositorio en tu directorio `htdocs` de XAMPP.
-2. 2. Inicia los módulos Apache y MySQL desde el panel de control de XAMPP.
+2. Inicia los módulos Apache y MySQL desde el panel de control de XAMPP.
 3. Importa el archivo `script.sql` proporcionado en el directorio del proyecto a través de phpMyAdmin para configurar la base de datos.
 4. Asegúrate de configurar los permisos adecuados en las carpetas si estás usando Linux/Mac:
 
